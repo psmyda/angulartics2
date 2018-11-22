@@ -40,7 +40,7 @@ export class Angulartics2GoogleTagManager {
   pageTrack(path: string) {
     if (typeof dataLayer !== 'undefined' && dataLayer) {
       dataLayer.push({
-        'event': 'Page View',
+        'event': 'Virtual',
         'content-name': path,
         'userId': this.angulartics2.settings.gtm.userId
       });
@@ -65,11 +65,11 @@ export class Angulartics2GoogleTagManager {
       dataLayer.push({
         event: properties.event || 'interaction',
         target: properties.category || 'Event',
-        action: action,
-        label: properties.label,
-        value: properties.value,
-        interactionType: properties.noninteraction,
-        userId: this.angulartics2.settings.gtm.userId,
+        //action: action,
+        //label: properties.label,
+        //value: properties.value,
+        //interactionType: properties.noninteraction,
+        //userId: this.angulartics2.settings.gtm.userId,
         ...properties.gtmCustom
       });
     }
